@@ -32,7 +32,7 @@ router.post(
     const newUser = req.body;
 
     // find user using email
-    const user = await User.findOne({ emil: newUser.email });
+    const user = await User.findOne({ email: newUser.email });
 
     // if user,throw error
     if (user) {
@@ -102,5 +102,6 @@ router.post(
       .send({ message: "logged in", user: user, token: token });
   }
 );
-// account detail
+// account delete
+
 export default router;
